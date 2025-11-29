@@ -1,0 +1,194 @@
+body {
+  direction: rtl;
+  font-family: -apple-system, "Segoe UI", Arial, sans-serif;
+  background-color: #f6f6f6;
+  color: #202122;
+  margin: 0;
+}
+
+/* כותרת עליונה בסגנון ויקי */
+#site-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #a2a9b1;
+  padding: 0.5rem 0;
+  margin-bottom: 0.7rem;
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.logo-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #a2a9b1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.6rem;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #ffffff;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.header-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.header-subtitle {
+  font-size: 13px;
+  color: #54595d;
+}
+
+#content {
+  background-color: white;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 0 4px rgba(0,0,0,0.08);
+}
+
+h1 {
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 0.3rem;
+  margin-top: 0;
+}
+
+h2 {
+  border-bottom: 1px solid #eaecf0;
+  margin-top: 1.8rem;
+  padding-bottom: 0.2rem;
+  font-size: 1.25rem;
+}
+
+h3 {
+  margin-top: 1.4rem;
+  font-size: 1.05rem;
+}
+
+/* אינפובוקס */
+.infobox {
+  float: left;
+  margin: 0 1.5rem 1rem 0;
+  background-color: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  width: 260px;
+}
+
+.infobox-title {
+  font-weight: bold;
+  text-align: center;
+  padding: 0.3rem;
+  background-color: #cedff2;
+  margin-bottom: 0.3rem;
+}
+
+.infobox-image img {
+  width: 100%;
+  height: auto;
+}
+
+.infobox-caption {
+  font-size: 0.8rem;
+  text-align: center;
+  color: #54595d;
+  margin-top: 0.2rem;
+}
+
+.infobox table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.infobox th {
+  text-align: right;
+  font-weight: bold;
+  vertical-align: top;
+  padding-top: 0.1rem;
+}
+
+.infobox td {
+  text-align: right;
+}
+
+/* טבלת תזונה */
+table.nutrition {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+table.nutrition th,
+table.nutrition td {
+  border: 1px solid #a2a9b1;
+  padding: 0.4rem 0.5rem;
+  text-align: right;
+}
+
+table.nutrition thead {
+  background-color: #eaf3ff;
+}
+
+/* קישורים בסגנון ויקי */
+a {
+  color: #0645ad;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* Gallery — desktop */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.gallery img {
+  width: 140px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+/* Mobile behavior */
+@media (max-width: 768px) {
+  #content {
+    padding: 1rem;
+  }
+
+  .infobox {
+    float: none;
+    margin: 0 0 1rem 0;
+    width: 100%;
+  }
+
+  .gallery {
+    flex-wrap: wrap; /* allow stacking on small screens */
+    justify-content: center;
+  }
+
+  .gallery img {
+    width: 45%;  /* 2 per row on mobile */
+    height: auto; /* adjust height proportionally */
+  }
+}
