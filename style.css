@@ -153,42 +153,35 @@ a:hover {
   text-decoration: underline;
 }
 
-
-/* Gallery — desktop */
+/* RTL support for all gallery elements */
 .gallery {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 1rem 0;
+  flex-wrap: wrap;
+  justify-content: flex-end; /* align images to RIGHT for Hebrew */
+  gap: 0.8rem;
+  margin: 1.5rem 0;
+  direction: rtl; /* helps final alignment */
 }
 
+/* Fix blurry images: do NOT force a bigger size than real */
 .gallery img {
-  width: 140px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 4px;
+  height: auto;
+  width: auto;
+  max-height: 180px; /* reduced upscale to keep clarity */
+  object-fit: contain; /* no cropping */
   display: block;
+  border-radius: 4px;
+  image-rendering: high-quality; /* sharpen */
 }
 
 /* Mobile behavior */
 @media (max-width: 768px) {
-  #content {
-    padding: 1rem;
-  }
-
-  .infobox {
-    float: none;
-    margin: 0 0 1rem 0;
-    width: 100%;
-  }
-
   .gallery {
-    flex-wrap: wrap; /* allow stacking on small screens */
-    justify-content: center;
+    justify-content: center; /* center on small screens */
   }
 
   .gallery img {
-    width: 45%;  /* 2 per row on mobile */
-    height: auto; /* adjust height proportionally */
+    max-width: 45%; /* 2 per row */
+    max-height: 150px;
   }
 }
